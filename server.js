@@ -2,7 +2,10 @@ import express from 'express';
 import cors from 'cors';
 
 const app = express();
+
+const cors = require("cors");
 app.use(cors());
+
 
 app.get("/", (req, res) => {
     res.send("Api is Running ...");
@@ -27,3 +30,4 @@ app.get("/api/fees", (req, res) => {
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server is running at PORT ${PORT}`));
+
